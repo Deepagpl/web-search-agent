@@ -6,4 +6,5 @@ beautifulsoup4==4.12.2
 google-generativeai==0.3.2
 aiohttp==3.9.1
 python-decouple==3.8
-tavily-python
+tavily-python==1.0.0
+serper-api==0.4.1
