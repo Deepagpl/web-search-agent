@@ -20,11 +20,16 @@ def initialize_session_state():
 
 def setup_page_config():
     """Configure the Streamlit page settings."""
+    # Get port from Heroku environment
+    port = int(os.environ.get("PORT", 8501))
+    
     st.set_page_config(
         page_title="Web Research Agent",
         page_icon="🔍",
         layout="wide",
-        initial_sidebar_state="expanded"
+        initial_sidebar_state="expanded",
+        server_port=port,
+        server_address="0.0.0.0"
     )
     
     # Add custom CSS
